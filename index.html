@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Киберспорт Михайловка — Школьный клуб</title>
+    <!-- Подключаем Tailwind CSS для красивого и современного дизайна -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+    <!-- Шапка сайта -->
+    <header class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-indigo-500/30">
+                    M
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-xl tracking-tight text-white">КИБЕРСПОРТ МИХАЙЛОВКА</h1>
+                    <p class="text-xs text-indigo-400">Школьная киберспортивная лига</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap gap-2 text-sm font-medium">
+                <a href="#about" class="px-3 py-1.5 rounded-lg hover:bg-slate-800 transition">О клубе</a>
+                <a href="#games" class="px-3 py-1.5 rounded-lg hover:bg-slate-800 transition">Дисциплины</a>
+                <a href="#tournaments" class="px-3 py-1.5 rounded-lg hover:bg-slate-800 transition">Турниры</a>
+                <a href="#teams" class="px-3 py-1.5 rounded-lg hover:bg-slate-800 transition">Составы</a>
+                <a href="#join" class="px-4 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition shadow-md shadow-indigo-600/30">Вступить</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero-bg py-20 px-4 text-center relative overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]"></div>
+        <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+                Официальный школьный клуб
+            </span>
+            <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                Прокачай свои навыки в <span class="text-indigo-400">киберспорте</span>!
+            </h2>
+            <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                Командная работа, стратегическое мышление, современные турниры и тренировки на мощных ПК. Стань частью нашей сборной!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#join" class="px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-white shadow-lg shadow-indigo-600/40 transition transform hover:-translate-y-0.5">
+                    Подать заявку в клуб
+                </a>
+                <a href="#tournaments" class="px-8 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 font-bold text-slate-200 border border-slate-700 transition">
+                    Расписание турниров
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-12 space-y-20 w-full">
+
+        <!-- О клубе -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold text-xl mb-4">⚡</div>
+                <h3 class="text-lg font-bold text-white mb-2">Современное железо</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Оснащенная зона для тренировок с высокой производительностью, клавиатурами, мышами и гарнитурами.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-xl mb-4">🏆</div>
+                <h3 class="text-lg font-bold text-white mb-2">Школьные турниры</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Регулярные внутренние матчи, межшкольные противостояния и участие в официальных региональных лиге.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">🤝</div>
+                <h3 class="text-lg font-bold text-white mb-2">Дисциплина и teamwork</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Учим не просто играть, а работать в команде, анализировать ошибки, развивать тактику и тайм-менеджмент.</p>
+            </div>
+        </section>
+
+        <!-- Дисциплины -->
+        <section id="games" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-white">Основные дисциплины</h2>
+                <p class="text-slate-400">В каких играх мы проводим тренировки и соревнования</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Игра 1 -->
+                <div class="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden group">
+                    <div class="h-40 bg-gradient-to-tr from-blue-900 to-indigo-900 p-6 flex items-end">
+                        <span class="px-3 py-1 rounded-md bg-blue-500/20 text-blue-300 text-xs font-bold border border-blue-500/30">MOBA</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Dota 2</h3>
+                        <p class="text-slate-400 text-sm">Командная стратегия 5x5, микро- и макроконтроль, разбор матчей и драфтов.</p>
+                    </div>
+                </div>
+                <!-- Игра 2 -->
+                <div class="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden group">
+                    <div class="h-40 bg-gradient-to-tr from-amber-900 to-orange-950 p-6 flex items-end">
+                        <span class="px-3 py-1 rounded-md bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">Tactical Shooter</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">Counter-Strike 2</h3>
+                        <p class="text-slate-400 text-sm">Отработка раскидок, стрельбы, позиционной борьбы и командного взаимодействия.</p>
+                    </div>
+                </div>
+                <!-- Игра 3 -->
+                <div class="rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden group">
+                    <div class="h-40 bg-gradient-to-tr from-red-950 to-slate-900 p-6 flex items-end">
+                        <span class="px-3 py-1 rounded-md bg-red-500/20 text-red-300 text-xs font-bold border border-red-500/30">Simulator / Strategy</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-red-400 transition">Мир Танков</h3>
+                        <p class="text-slate-400 text-sm">Тактические баталии бронетехники, слаженность звеньев и тактика фланговых атак.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Турниры -->
+        <section id="tournaments" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-white">Расписание турниров и событий</h2>
+                <p class="text-slate-400">Следите за датами и готовьтесь к матчам</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden divide-y divide-slate-800">
+                <div class="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-slate-850 transition">
+                    <div class="space-y-1">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Регистрация открыта</span>
+                        <h4 class="text-lg font-bold text-white pt-1">Школьный кубок по Dota 2 (Осень 2026)</h4>
+                        <p class="text-sm text-slate-400">Формат: 5x5, Bo1 групповой этап, финал Bo3.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-indigo-400">10 октября 2026</span>
+                        <p class="text-xs text-slate-500">Актовый зал / Клуб</p>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:bg-slate-850 transition">
+                    <div class="space-y-1">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Анонс</span>
+                        <h4 class="text-lg font-bold text-white pt-1">Школьный чемпионат по CS2</h4>
+                        <p class="text-sm text-slate-400">Сборка команд среди 9-11 классов.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-sm font-bold text-indigo-400">24 октября 2026</span>
+                        <p class="text-xs text-slate-500">Компьютерный класс</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Команды -->
+        <section id="teams" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-white">Составы сборных</h2>
+                <p class="text-slate-400">Наши капитаны и ведущие игроки</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-indigo-600/20 text-indigo-400 font-bold text-2xl flex items-center justify-center mx-auto border border-indigo-500/30">
+                        Д2
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Команда «Mikhaylovka Titans»</h3>
+                    <p class="text-xs text-indigo-400 uppercase tracking-wider font-semibold">Dota 2 Squad</p>
+                    <p class="text-sm text-slate-400">Капитан: Александр (11 класс)</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-amber-600/20 text-amber-400 font-bold text-2xl flex items-center justify-center mx-auto border border-amber-500/30">
+                        CS
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Команда «Storm_MSK»</h3>
+                    <p class="text-xs text-amber-400 uppercase tracking-wider font-semibold">CS2 Squad</p>
+                    <p class="text-sm text-slate-400">Капитан: Максим (10 класс)</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-red-600/20 text-red-400 font-bold text-2xl flex items-center justify-center mx-auto border border-red-500/30">
+                        MT
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Команда «Steel Legion»</h3>
+                    <p class="text-xs text-red-400 uppercase tracking-wider font-semibold">Мир Танков</p>
+                    <p class="text-sm text-slate-400">Капитан: Дмитрий (11 класс)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма заявки -->
+        <section id="join" class="bg-gradient-to-br from-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-8 sm:p-12 space-y-8 max-w-3xl mx-auto">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-white">Вступить в киберспортивный клуб</h2>
+                <p class="text-slate-300 text-sm">Заполни анкету, и мы свяжемся с тобой для приглашения на тренировку.</p>
+            </div>
+            
+            <form id="joinForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-xs font-semibold text-slate-300">Фамилия и Имя</label>
+                        <input type="text" required placeholder="Иван Иванов" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-semibold text-slate-300">Класс</label>
+                        <input type="text" required placeholder="9 «А»" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-semibold text-slate-300">Любимая дисциплина</label>
+                    <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                        <option>Dota 2</option>
+                        <option>Counter-Strike 2</option>
+                        <option>Мир Танков</option>
+                        <option>Другая / Игрок широкого профиля</option>
+                    </select>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-semibold text-slate-300">Игровой никнейм (необязательно)</label>
+                    <input type="text" placeholder="Ваш ник в Steam / игре" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-white shadow-lg shadow-indigo-600/30 transition">
+                    Отправить заявку
+                </button>
+                <p id="formSuccess" class="hidden text-center text-emerald-400 font-semibold text-sm pt-2">
+                    ✅ Спасибо! Заявка успешно отправлена руководителю клуба. Ждем на тренировке!
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-8 text-center text-xs text-slate-500 space-y-2">
+        <p>© 2026 Киберспорт Михайловка. Школьный киберспортивный клуб.</p>
+        <p>Разработано для учеников и любителей цифрового спорта.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('joinForm').reset();
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
