@@ -17,7 +17,7 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
 
     <!-- Шапка сайта -->
-    <header class="bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+    <header class="bg-slate-900/85 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-black text-2xl text-white shadow-lg shadow-indigo-500/30">
@@ -119,27 +119,31 @@
             </div>
         </section>
 
-        <!-- Форма заявки -->
+        <!-- Форма заявки с отправкой на почту -->
         <section id="join" class="bg-gradient-to-br from-indigo-950 to-slate-900 border border-indigo-500/30 rounded-3xl p-8 sm:p-12 space-y-8 max-w-3xl mx-auto">
             <div class="text-center space-y-2">
                 <h2 class="text-3xl font-extrabold text-white">Вступить в киберспортивный клуб</h2>
-                <p class="text-slate-300 text-sm">Заполни анкету, и мы свяжемся с тобой для приглашения на тренировку.</p>
+                <p class="text-slate-300 text-sm">Заполни анкету, и заявка мгновенно придет на почту руководителю.</p>
             </div>
             
-            <form id="joinForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <!-- Ваш ключ доступа Web3Forms -->
+                <input type="hidden" name="access_key" value="8a59422d-1fef-46d6-b6d2-9c1abe6c8b55">
+                <input type="hidden" name="subject" value="Новая заявка в клуб Киберспорт Михайловка!">
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1">
                         <label class="text-xs font-semibold text-slate-300">Фамилия и Имя</label>
-                        <input type="text" required placeholder="Иван Иванов" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                        <input type="text" name="name" required placeholder="Иван Иванов" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
                     </div>
                     <div class="space-y-1">
                         <label class="text-xs font-semibold text-slate-300">Класс</label>
-                        <input type="text" required placeholder="9 «А»" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                        <input type="text" name="class" required placeholder="9 «А»" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
                     </div>
                 </div>
                 <div class="space-y-1">
                     <label class="text-xs font-semibold text-slate-300">Любимая дисциплина</label>
-                    <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                    <select name="discipline" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
                         <option>Dota 2</option>
                         <option>Counter-Strike 2</option>
                         <option>Мир Танков</option>
@@ -148,14 +152,11 @@
                 </div>
                 <div class="space-y-1">
                     <label class="text-xs font-semibold text-slate-300">Игровой никнейм (необязательно)</label>
-                    <input type="text" placeholder="Ваш ник в Steam / игре" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
+                    <input type="text" name="nickname" placeholder="Ваш ник в Steam / игре" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:border-indigo-500 focus:outline-none text-white text-sm">
                 </div>
                 <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-white shadow-lg shadow-indigo-600/30 transition">
                     Отправить заявку
                 </button>
-                <p id="formSuccess" class="hidden text-center text-emerald-400 font-semibold text-sm pt-2">
-                    ✅ Спасибо! Заявка успешно отправлена руководителю клуба. Ждем на тренировке!
-                </p>
             </form>
         </section>
 
@@ -167,16 +168,5 @@
         <p>Разработано для учеников и любителей цифрового спорта.</p>
     </footer>
 
-    <script>
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            document.getElementById('joinForm').reset();
-            const successMsg = document.getElementById('formSuccess');
-            successMsg.classList.remove('hidden');
-            setTimeout(() => {
-                successMsg.classList.add('hidden');
-            }, 6000);
-        }
-    </script>
 </body>
 </html>
